@@ -7,7 +7,7 @@ const CourseSection = (props) => {
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: -200, // Scroll by the width of the container
+        left: -195, // Scroll by the width of the container
         behavior: 'smooth',
       });
     }
@@ -16,7 +16,7 @@ const CourseSection = (props) => {
   const scrollRight = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollBy({
-        left: 200, // Scroll by the width of the container
+        left: 195, // Scroll by the width of the container
         behavior: 'smooth',
       });
     }
@@ -24,7 +24,7 @@ const CourseSection = (props) => {
   return (
     <div>
       <div className="flex justify-between items-center text-2xl font-semibold">
-        <h1>{props.title}</h1>
+        <h1>{props.category.categoryName}</h1>
         <div className="flex justify-end gap-4">
           <button
             onClick={scrollLeft}
@@ -44,16 +44,7 @@ const CourseSection = (props) => {
         ref={scrollContainerRef}
         className="flex overflow-x-auto justify-between [&::-webkit-scrollbar]:hidden space-x-4 py-4 mx-2 scroll-smooth"
       >
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        
+        {props.category.courses.map((item,index)=>(<CourseCard key={index} course={item} />))}
       </div>
     </div>
   )
