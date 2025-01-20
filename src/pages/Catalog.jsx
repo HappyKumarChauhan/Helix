@@ -27,7 +27,7 @@ const Catalog = () => {
           </button>
         </div>
       </section>
-      <section className="programs px-20 py-10">
+      <section className="programs px-10 py-10">
         <div className="header flex py-5 items-center w-full justify-between">
           <h1 className="text-2xl font-semibold">All Programs</h1>
           <div className="border-[5px] flex justify-between border-blue-700 rounded-md py-3 px-4 w-64">
@@ -80,7 +80,7 @@ const Catalog = () => {
           </div>
         </div>
       </section>
-      <section className="skills-collection bg-blue-950 p-20 flex flex-col items-center">
+      <section className="skills-collection bg-blue-950 p-10 flex flex-col items-center">
         <h1 className="heading text-3xl text-white font-semibold">
           Discover our Skill Collections
         </h1>

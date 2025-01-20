@@ -92,7 +92,7 @@ const School = () => {
       <hr />
       <section className='learning-path py-10 px-10'>
         <h1 className="title text-3xl font-semibold">Learning Paths by Job Title</h1>
-        <div className="flex overflow-x-auto mx-3 my-5 gap-2 text-lg border-b-[1px] border-gray-400">
+        <div className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden mx-3 my-5 gap-2 text-lg border-b-[1px] border-gray-400">
           {learningPaths.map((element,index)=>(<button key={index} onClick={()=>{setActiveTab(element)}} className={`whitespace-nowrap p-3 ${element.title===activeTab.title?'text-blue-700 border-b-2 border-blue-700':''}`}>{element.title}</button>))}
         </div>
         <p className="description max-w-[600px] text-lg text-justify">{activeTab.description}</p>

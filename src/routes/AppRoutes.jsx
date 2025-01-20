@@ -10,6 +10,7 @@ import Outcomes from '../pages/Outcomes'
 import Login from '../pages/Login'
 import Footer from '../components/Footer'
 import School from '../pages/School'
+import Course from '../pages/Course'
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/course" element={<Course />} />
         <Route path="/business" element={<Business />} />
         <Route path="/school" element={<School />} />
         <Route path="/government" element={<Government />} />
