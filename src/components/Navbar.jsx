@@ -1,10 +1,16 @@
-import React, { useState} from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState} from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import LearnDropDown from './LearnDropDown'
 
 function Navbar() {
+  const location=useLocation();
   const [isLearnDropdownOpen, setisLearnDropdownOpen] = useState(false)
+  useEffect(() => {
+    setisLearnDropdownOpen(false)
+  }, [location])
+  
+  
   return (
     <>
       <nav className="bg-[#f3ecec] shadow-md sticky top-0 w-full z-40">
