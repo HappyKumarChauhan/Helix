@@ -31,9 +31,9 @@ const Course = () => {
             </section>
             <section className='lesson-section px-10 py-10'>
                 <h1 className='text-3xl font-semibold'>Course Lessons</h1>
-                <div className="lessons-container flex justify-center gap-5 flex-wrap py-5">
+                <div className="lessons-container flex gap-5 flex-wrap py-5">
                     {Array.from({ length: 6 }).map((_, index) => (<div key={index} className="lesson-card border p-5 max-w-72 bg-white">
-                        <h2><AutoStoriesIcon /> Lesson 1</h2>
+                        <h2><AutoStoriesIcon /> Lesson {index+1}</h2>
                         <h1 className="title text-lg py-2">The Data Science Process</h1>
                         <p className="description text-sm">Learn about the basics of data science and machine learning. Walk through the CRISP-DM process and how you can apply it to many data science problems.</p>
                     </div>))}

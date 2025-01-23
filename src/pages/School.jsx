@@ -16,23 +16,28 @@ const School = () => {
     'Product Management',
     'Programming & Development',
   ]
-  const learningPaths=[{
-    title:'Machine Learning Engineer',
-    description:'Machine learning is becoming a fundamental skill as software development is entering a new era. This path will enable you to start a career as a machine learning engineer. First learn the fundamentals of programming in Python, linear algebra, and neural networks, and then move on to core machine learning concepts.'
-  },
-  {
-    title:'Deep Learning Engineer',
-    description:'Deep learning is driving advances in artificial intelligence that are changing our world. To join this field, start by learning Python fundamentals and neural networks, move on to core machine learning concepts, and then apply deep neural networks to challenges like image classification and generation, time-series prediction, and model deployment.'
-  },
-  {
-    title:'Aritificial Intelligence Specialist',
-    description:'Artificial intelligence is expected to be a $60 billion industry by 2025. Learn AI skills in specialized fields like computer vision, natural language processing, deep reinforcement learning, or core AI algorithms. Each of these programs covers advanced topics, building on your existing skills in programming, deep learning, and machine learning.'
-  },
-  {
-    title:'Quantitative Analyst',
-    description:'Data-driven traders are now responsible for more than 30% of all U.S. stock trades by investors (or about $1 trillion USD worth of investments). Learn artificial intelligence by building programming and linear algebra skills, then learn to analyze real data and develop financial models for trading.'
-  }
-]
+  const learningPaths = [
+    {
+      title: 'Machine Learning Engineer',
+      description:
+        'Machine learning is becoming a fundamental skill as software development is entering a new era. This path will enable you to start a career as a machine learning engineer. First learn the fundamentals of programming in Python, linear algebra, and neural networks, and then move on to core machine learning concepts.',
+    },
+    {
+      title: 'Deep Learning Engineer',
+      description:
+        'Deep learning is driving advances in artificial intelligence that are changing our world. To join this field, start by learning Python fundamentals and neural networks, move on to core machine learning concepts, and then apply deep neural networks to challenges like image classification and generation, time-series prediction, and model deployment.',
+    },
+    {
+      title: 'Aritificial Intelligence Specialist',
+      description:
+        'Artificial intelligence is expected to be a $60 billion industry by 2025. Learn AI skills in specialized fields like computer vision, natural language processing, deep reinforcement learning, or core AI algorithms. Each of these programs covers advanced topics, building on your existing skills in programming, deep learning, and machine learning.',
+    },
+    {
+      title: 'Quantitative Analyst',
+      description:
+        'Data-driven traders are now responsible for more than 30% of all U.S. stock trades by investors (or about $1 trillion USD worth of investments). Learn artificial intelligence by building programming and linear algebra skills, then learn to analyze real data and develop financial models for trading.',
+    },
+  ]
   const freeAICourses = [
     {
       title: 'Intro to Tensorflow for deep learning',
@@ -90,12 +95,30 @@ const School = () => {
         </div>
       </section>
       <hr />
-      <section className='learning-path py-10 px-10'>
-        <h1 className="title text-3xl font-semibold">Learning Paths by Job Title</h1>
+      <section className="learning-path py-10 px-10">
+        <h1 className="title text-3xl font-semibold">
+          Learning Paths by Job Title
+        </h1>
         <div className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden mx-3 my-5 gap-2 text-lg border-b-[1px] border-gray-400">
-          {learningPaths.map((element,index)=>(<button key={index} onClick={()=>{setActiveTab(element)}} className={`whitespace-nowrap p-3 ${element.title===activeTab.title?'text-blue-700 border-b-2 border-blue-700':''}`}>{element.title}</button>))}
+          {learningPaths.map((element, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setActiveTab(element)
+              }}
+              className={`whitespace-nowrap p-3 ${
+                element.title === activeTab.title
+                  ? 'text-blue-700 border-b-2 border-blue-700'
+                  : ''
+              }`}
+            >
+              {element.title}
+            </button>
+          ))}
         </div>
-        <p className="description max-w-[600px] text-lg text-justify">{activeTab.description}</p>
+        <p className="description max-w-[600px] text-lg text-justify">
+          {activeTab.description}
+        </p>
       </section>
       <section className="px-10 py-10">
         <h1 className="title text-3xl py-4 font-semibold">
@@ -120,10 +143,13 @@ const School = () => {
             <h1 className="title font-semibold text-2xl">Telecommunications</h1>
             <ul className="description list-disc p-5 min-w-1/4 flex flex-col gap-4">
               <li>
-              Artificial Intelligence is employed in customer service chatbots, network optimization, fraud detection, and predictive analytics.
+                Artificial Intelligence is employed in customer service
+                chatbots, network optimization, fraud detection, and predictive
+                analytics.
               </li>
               <li>
-              It enhances customer support, improves network performance, and identifies potential issues in real-time.
+                It enhances customer support, improves network performance, and
+                identifies potential issues in real-time.
               </li>
             </ul>
           </div>
@@ -131,10 +157,13 @@ const School = () => {
             <h1 className="title font-semibold text-2xl">Energy</h1>
             <ul className="description list-disc p-5 min-w-1/4 flex flex-col gap-4">
               <li>
-              Artificial Intelligence is used for energy grid optimization, predictive maintenance of infrastructure, demand response management, and renewable energy forecasting.
+                Artificial Intelligence is used for energy grid optimization,
+                predictive maintenance of infrastructure, demand response
+                management, and renewable energy forecasting.
               </li>
               <li>
-              It enables efficient energy usage, reduces costs, and supports sustainable practices.
+                It enables efficient energy usage, reduces costs, and supports
+                sustainable practices.
               </li>
             </ul>
           </div>
@@ -142,10 +171,13 @@ const School = () => {
             <h1 className="title font-semibold text-2xl">Healthcare</h1>
             <ul className="description list-disc p-5 min-w-1/4 flex flex-col gap-4">
               <li>
-              Artificial Intelligence is used in medical imaging analysis, drug discovery, personalized medicine, patient monitoring, and disease diagnosis.
+                Artificial Intelligence is used in medical imaging analysis,
+                drug discovery, personalized medicine, patient monitoring, and
+                disease diagnosis.
               </li>
               <li>
-              It helps healthcare professionals make more accurate diagnoses, predict disease outcomes, and enhance patient care.
+                It helps healthcare professionals make more accurate diagnoses,
+                predict disease outcomes, and enhance patient care.
               </li>
             </ul>
           </div>
@@ -162,9 +194,9 @@ const School = () => {
         </div>
       </section>
       <section className="px-10 py-5 text-2xl font-semibold">
-          <h1 className="text-4xl font-semibold py-3">
-            Free Artificial Intelligence Programs
-          </h1>
+        <h1 className="text-4xl font-semibold py-3">
+          Free Artificial Intelligence Programs
+        </h1>
         <div className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden space-x-6 py-4 mx-2 scroll-smooth">
           {freeAICourses.map((course, index) => (
             <Link key={index} to={`/`}>
@@ -196,9 +228,12 @@ const School = () => {
             </Link>
           ))}
         </div>
-        <Link to="/catalog" className="text-blue-800 p-4 hover:underline text-lg">
-            View Full Catalog
-          </Link>
+        <Link
+          to="/catalog"
+          className="text-blue-800 p-4 hover:underline text-lg"
+        >
+          View Full Catalog
+        </Link>
       </section>
       <section className="other-schools-section py-10 px-10">
         <div className="bg-white border px-5 py-6">
@@ -206,7 +241,6 @@ const School = () => {
           <div className="button-container py-5 max-w-[1000px] min-w-72 flex gap-4 flex-wrap">
             {otherCourses.map((course, element) => (
               <button
-                
                 key={element}
                 className="min-w-56 border-2 rounded-sm border-blue-800 text-blue-800
             hover:text-white hover:bg-blue-800 transition-all py-2 px-2 font-semibold"
